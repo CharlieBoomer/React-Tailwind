@@ -2,7 +2,8 @@ import './App.css';
 import manageLogo from './components/assets/logo.svg'
 import satImage from './components/assets/illustration-intro.svg'
 import { useState } from 'react';
-
+import CarouselItem from './components/CarouselItem';
+import Carousel from './components/Carousel';
 function App() {
   const [open,setOpen] =useState(false);
   return (
@@ -211,12 +212,12 @@ function App() {
         <h2 className="text-4xl font-bold text-center">
           What's Different About Manage?
         </h2>
-        {/* <!-- Testimonials Container --> */}
+         {/* <!-- Testimonials Container --> */}
         <div className="flex flex-col mt-24 md:flex-row md:space-x-6">
-          {/* <!-- Testimonial 1 --> */}
+          {/* <!-- Testimonial 1 -->  */}
           
           <div
-            className="flex flex-col items-center p-6 space-y-6 rounded-lg bg-veryLightGray md:w-1/3"
+            className="hidden flex-col items-center p-6 space-y-6 rounded-lg bg-veryLightGray md:flex md:w-1/3"
           >
             <img src={require("./components/assets/avatar-anisha.png")} className="w-16 -mt-14" alt="" />
             <h5 className="text-lg font-bold">Anisha Li</h5> 
@@ -227,7 +228,7 @@ function App() {
               </p>
           </div>
           
-          {/* <!-- Testimonial 2 --> */}
+           {/* <!-- Testimonial 2 -->  */}
           <div
             className="hidden flex-col items-center p-6 space-y-6 rounded-lg bg-veryLightGray md:flex md:w-1/3"
           >
@@ -240,7 +241,7 @@ function App() {
             </p>
           </div>
 
-          {/* <!-- Testimonial 3 --> */}
+           {/* <!-- Testimonial 3 -->  */}
           <div
             className="hidden flex-col items-center p-6 space-y-6 rounded-lg bg-veryLightGray md:flex md:w-1/3"
           >
@@ -252,7 +253,13 @@ function App() {
               everyone motivated.”
             </p>
           </div>
+        </div> 
+        {/* Carousel Component */}
+        
+        <div className="flex flex-col mt-24 md:flex-row md:space-x-6">
+           <Carousel/> 
         </div>
+        
         {/* <!-- Button --> */}
         <div className="my-16">
           <a
